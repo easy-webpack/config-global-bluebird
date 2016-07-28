@@ -1,7 +1,7 @@
 import {WebpackConfig, get} from '@easy-webpack/core'
 import * as webpack from 'webpack'
 
-export = function bluebird({expose = true}) {
+export = function bluebird({expose = true} = {}) {
   return function bluebird(this: WebpackConfig): WebpackConfig {
     const config = {
       plugins: [
