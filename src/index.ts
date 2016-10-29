@@ -13,7 +13,7 @@ export = function bluebird({expose = true} = {}) {
 
     if (expose) {
       config.module = {
-        loaders: get(this, 'module.loaders', []).concat([
+        rules: get(this, 'module.rules', []).concat([
           { test: /[\/\\]node_modules[\/\\]bluebird[\/\\].+\.js$/, loader: 'expose?Promise' }
         ])
       }
